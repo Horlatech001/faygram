@@ -1,0 +1,59 @@
+@import "../../style.scss";
+
+.people {
+    background-color: #000;
+    color: #fff;
+    width: 80%;
+    padding: 50px;
+
+
+    @include mobile {
+        width: 100%;
+    }
+
+    .title {
+        span {
+            color: #5c5c7b;
+            font-size: 22px;
+        }
+    }
+
+    .users {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        row-gap: 30px;
+        flex-wrap: wrap;
+
+        .user-card {
+            width: 180px;
+            height: 120px;
+            background-color: #101012;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            justify-content: center;
+            align-items: center;
+
+
+            @include mobile {
+                width: 150px;
+                height: 100px;
+            }
+
+            img {
+                height: 50px;
+                width: 50px;
+                object-fit: cover;
+                border-radius: 50%;
+
+
+                @include mobile {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+}

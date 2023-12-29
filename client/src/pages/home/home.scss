@@ -1,0 +1,25 @@
+@import "../../style.scss";
+.home{
+    background-color: #000;
+    color: #fff;
+    width: 80%;
+    padding: 50px;
+
+    @include mobile{
+        width: 100%;
+    }
+
+    .title{
+        width: 60%;
+        margin: auto;
+        margin-bottom: 50px;
+
+        @include mobile{
+            width: 100%;
+        }
+
+        h1{
+            font-size: 25px;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@import "../../style.scss";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway";
+}
+.register{
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    .card{
+        width: 90%;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+
+        .left{
+            flex: 50%;
+
+            @include tablet{
+                flex: 100%;
+            }
+
+            .title{
+                text-align: center;
+                margin-top: 10px;
+
+                h2{
+                    margin-top: 10px;
+                }
+    
+                p{
+                    margin-top: 5px;
+                    color: darkorchid;
+                }
+            }
+
+            .formDiv{
+                width: 70%;
+                padding: 20px;
+                margin: auto;
+
+                @include mobile{
+                    margin-top: 20px;
+                    width: 100%;
+                    padding: 20px;
+                }
+
+                input{
+                    width: 100%;
+                    padding: 15px;
+                    border-radius: 5px;
+                    border: none;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    background-color: darkslategray;
+                    outline: none;
+                    color: #fff;
+                }
+
+                button{
+                    width: 100%;
+                    padding: 10px;
+                    text-align: center;
+                    background-color: dodgerblue;
+                    border: none;
+                    border-radius: 5px;
+                    margin-top: 5px;
+                    color: #fff;
+                    font-size: 16px;
+                }
+            }
+
+        }
+
+        .right{
+            flex: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            @include tablet{
+                display: none;
+            }
+
+            img{
+                width: 500px;
+
+                @include laptop{
+                    width: 400px;
+                }
+            }
+
+        }
+    }
+}

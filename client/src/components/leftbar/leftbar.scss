@@ -1,0 +1,106 @@
+@import "../../style.scss";
+.leftbar{
+    background-color: #09090A;
+    width: 20%;
+    color: #fff;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: block;
+
+    @include laptop{
+        width: 30%;
+    }
+
+    @include mobile{
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        height: auto;
+    }
+
+    .logo{
+
+        h1{
+            font-size: 25px;
+
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+
+    .user-icon{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+
+        @include mobile{
+            display: none;
+        }
+
+        img{
+            width: 25px;
+        }
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @include mobile{
+            flex-direction: row;
+            gap: 2px;
+            justify-content: space-evenly;
+        }
+
+        #active-item{
+            background-color: #877EFF;
+
+            @include mobile{
+                background-color: #09090A;
+            }
+        }
+
+        #logout{
+            margin-top: 50px;
+
+            @include mobile{
+                margin-top: 0;
+            }
+        }
+
+        #logout:hover{
+            background-color: #09090A;
+        }
+
+        .item{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            border-radius: 10px;
+
+            img{
+                width: 25px;
+            }
+
+            span{
+                font-size: 16px;
+
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+
+        .item:hover{
+            background-color: #877EFF;
+            cursor: pointer;
+        }
+    }
+}
