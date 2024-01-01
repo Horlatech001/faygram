@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 const Create = () => {
   const [file, setFile] = useState(null);
   const [desc, setDesc] = useState("");
+  const [location, setLocation] = useState("");
   
   const navigate = useNavigate();
 
@@ -43,8 +44,9 @@ const Create = () => {
     e.preventDefault();
     let imgUrl = "";
     if (file) imgUrl = await upload();
-    mutation.mutate({ desc, img: imgUrl });
+    mutation.mutate({ desc, location, img: imgUrl });
     setDesc("");
+    setLocation("");
     setFile(null);
   };
 
@@ -96,15 +98,8 @@ const Create = () => {
             </div>
             <div className="form-group">
               <span>Add Location</span>
-              <input type="text" className="text-input" />
-            </div>
-            <div className="form-group">
-              <span>Add tags</span>
-              <input
-                type="text"
-                className="text-input"
-                placeholder="art, music, education"
-              />
+              <input type="text" className="text-input" onChange={(e) => setLocation(e.target.value)}
+                value={location}/>
             </div>
             <div className="button-group">
               <button className="cancel">Cancel</button>

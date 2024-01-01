@@ -42,10 +42,11 @@ const Post = ({ post }) => {
       <div className="container">
         <div className="user">
           <div className="userInfo">
-            <img src={post.img} alt={post.name} />
+            <img src={"./upload/" + post.profilePic} alt={post.name} />
             <div className="details">
               <span className="name">{post.name}</span>
-              <span className="date">{moment(post.createdAt).fromNow()}</span>
+              {/* <span className="date">{post.location}</span> */}
+              <span className="date">{moment(post.createdAt).fromNow()} - {post.location}</span>
             </div>
           </div>
         </div>

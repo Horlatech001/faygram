@@ -12,6 +12,7 @@ import "./app.scss";
 import People from "./pages/people/People";
 import Create from "./pages/create/Create";
 import Register from "./pages/register/Register";
+import Profile from "./pages/profile/Profile";
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -52,6 +53,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/profile/:id",
+          element: <Profile />,
         },
         {
           path: "/explore",
