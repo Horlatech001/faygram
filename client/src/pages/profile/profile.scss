@@ -1,0 +1,95 @@
+@import "../../style.scss";
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #000;
+    color: #fff;
+    width: 80%;
+    padding: 50px;
+
+    @include mobile{
+        width: 100%;
+    }
+
+    .title{
+        width: 60%;
+        margin: auto;
+        margin-bottom: 50px;
+
+        @include mobile{
+            width: 100%;
+        }
+
+        h1{
+            font-size: 25px;
+        }
+    }
+
+    .container {
+        padding: 30px;
+        background-color: #09090A;
+        width: 60%;
+        margin: auto;
+        border-radius: 20px;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        .user {
+
+            .userInfo {
+                display: flex;
+                gap: 15px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .details {
+                    display: flex;
+                    flex-direction: column;
+
+                    .name {
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+
+                    .date {
+                        font-size: 15px;
+                        color: darkorchid;
+                    }
+
+                }
+            }
+        }
+
+        .content {
+            margin: 20px 0px;
+
+            img {
+                width: 100%;
+                max-height: 600px;
+                object-fit: contain;
+                margin-top: 20px;
+                border-radius: 20px;
+            }
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+    }
+}

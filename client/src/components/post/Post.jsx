@@ -42,10 +42,9 @@ const Post = ({ post }) => {
       <div className="container">
         <div className="user">
           <div className="userInfo">
-            <img src={"./upload/" + post.profilePic} alt={post.name} />
+            <img src={"./upload/" + post.profilePic} alt="" />
             <div className="details">
               <span className="name">{post.name}</span>
-              {/* <span className="date">{post.location}</span> */}
               <span className="date">{moment(post.createdAt).fromNow()} - {post.location}</span>
             </div>
           </div>
@@ -53,7 +52,7 @@ const Post = ({ post }) => {
 
         <div className="content">
           <p>{post.desc}</p>
-          <img src={"./upload/" + post.img} alt={post.name} />
+          <img src={"./upload/" + post.img} alt="" />
         </div>
 
         <div className="info">

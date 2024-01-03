@@ -10,7 +10,7 @@ const People = () => {
     })
   );
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="people">
@@ -24,7 +24,7 @@ const People = () => {
           : isLoading
           ? "Loading"
           : data.map((user) => (
-            <Link to={`/profile/${user.id}`} key={user.id}>
+            <Link to={`/profile/${user.id}`} key={user.id} className="link-style">
               <div className="user-card">
                 <img src={"./upload/" + user.profilePic} alt="user-img" />
                 <span>{user.name}</span>

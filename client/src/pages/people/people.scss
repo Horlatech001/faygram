@@ -9,6 +9,7 @@
 
     @include mobile {
         width: 100%;
+        height: 100vh;
     }
 
     .title {
@@ -24,6 +25,13 @@
         justify-content: space-evenly;
         row-gap: 30px;
         flex-wrap: wrap;
+
+        .link-style {
+            text-decoration: none;
+            /* Remove underline */
+            color: white;
+            /* Set color to white */
+        }
 
         .user-card {
             width: 180px;
